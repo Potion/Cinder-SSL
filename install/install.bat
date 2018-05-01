@@ -49,10 +49,10 @@ if exist %ssl_final_include_path% rmdir %ssl_final_include_path% /q /s
 mkdir %ssl_final_include_path%
 echo Final include path: %ssl_final_include_path%
 
-set version_name=openssl-1.0.2j-vs2015
+set version_name=openssl-1.0.2l-vs2015
 echo "%me%: Downloading %version_name% ..."
 set compressed="%tmp%\%version_name%.7z"
-start /wait bitsadmin /transfer OpenSSLDownload /download /priority normal http://www.npcglib.org/~stathis/downloads/%version_name%.7z %compressed%
+start /wait bitsadmin /transfer OpenSSLDownload /download /priority normal https://www.npcglib.org/~stathis/downloads/%version_name%.7z %compressed%
 
 echo "%me%: Decompressing ..."
 set PATH=%PATH%;C:\Program Files\7-Zip\
